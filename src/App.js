@@ -4,9 +4,12 @@ import NavBar from './Components/NavBar';
 import Home from './Components/Home';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { MainContext } from './Contexts/MainContext';
-import {Container } from 'react-bootstrap'
+import {Container,Row,Col, Image } from 'react-bootstrap'
+import NewCar from './Components/NewCar';
+import banner from './imgs/banner.png';
 
 function App() {
+  const [CounCar, setCounCar] = useState(4);
   const [cars, setCars] = useState([
     {           
       id: 1,
@@ -43,14 +46,23 @@ function App() {
   ])
   return (
 
-      <MainContext.Provider value={{cars, setCars}}>
+      <MainContext.Provider value={{cars, setCars, CounCar, setCounCar}}>
         <Router>
         <div className="App">
           <NavBar />
+          <Container fluid style={{padding:"0"}}>
+            <Image src={banner} fluid style={{width:"100%"}}/>
+          </Container>
           <Container>
             <Switch>
               <Route exact path="/" component={Home}/>            
+              <Route path="/create" component={NewCar}/>            
             </Switch>
+            </Container>
+            <Container fluid className="bg-dark">
+              <Row>
+                <Col>1 of 1</Col>
+              </Row>
             </Container>
         </div>
       </Router>

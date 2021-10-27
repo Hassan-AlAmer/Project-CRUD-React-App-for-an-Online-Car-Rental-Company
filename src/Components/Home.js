@@ -7,7 +7,7 @@ function Home() {
 
     const handleDelete =(id)=>{
         const newCar=cars.filter((car)=>(car.id !== id));
-        setCars(newCar);
+        setCars(newCar);        
     }
 
     return (

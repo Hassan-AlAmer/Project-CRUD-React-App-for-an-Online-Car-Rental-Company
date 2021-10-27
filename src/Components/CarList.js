@@ -1,10 +1,11 @@
 import {Col, Card, ListGroup, ListGroupItem, Alert, Button, Row} from 'react-bootstrap';
 const CarList = ({cars, handleDelete}) => {
+    console.log(cars);
     return(
         
         <>
             {cars.length != 0 ? cars.map((car)=>(
-                <Col lg={3} key={car.id} >
+                <Col lg={3} key={car.id} className="mb-3">
                     <Card className="h-100">
                     <Card.Img variant="top" src={car.urlImg} />
                     <Card.Body>
