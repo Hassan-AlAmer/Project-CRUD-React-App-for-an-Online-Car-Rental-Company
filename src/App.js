@@ -4,26 +4,26 @@ import NavBar from './Components/NavBar';
 import Home from './Components/Home';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { MainContext } from './Contexts/MainContext';
+import {Container } from 'react-bootstrap'
 
 function App() {
   const [cars, setCars] = useState([
 
   ])
   return (
-    <div className="App">
+
       <MainContext.Provider value={{cars, setCars}}>
         <Router>
         <div className="App">
           <NavBar />
-          <div className="content">
+          <Container>
             <Switch>
               <Route exact path="/" component={Home}/>            
             </Switch>
-          </div>
+            </Container>
         </div>
       </Router>
     </MainContext.Provider>
-    </div>
   );
 }
 
