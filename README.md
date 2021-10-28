@@ -29,3 +29,9 @@ You are assigned to a project in which you need to develop a React app for an on
 - Multiple components should be there for performing various functions
 
 - **Context API** should be used while developing the app
+
+## Project Screenshot:
+![Home](https://user-images.githubusercontent.com/92730894/139312981-e1ce0bd1-b1d7-440c-a9e8-e4fb2b5174bd.png)
+![New Car](https://user-images.githubusercontent.com/92730894/139313024-76899501-c3b4-4950-b241-d1c737348140.png)
+![Update Car](https://user-images.githubusercontent.com/92730894/139313060-46a6cb47-6bda-486a-ad2e-71662efb1ff4.png)
+![Delete Car](https://user-images.githubusercontent.com/92730894/139313078-baf6c8ff-eac3-4529-84f3-2297f8499fc9.png)
