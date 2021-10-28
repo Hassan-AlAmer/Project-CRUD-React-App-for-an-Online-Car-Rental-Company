@@ -61,9 +61,16 @@ function App() {
               <Route path="/update/:id" component={UpdateCar}/>            
             </Switch>
             </Container>
-            <Container fluid className="bg-dark">
+            <Container fluid className="bg-dark text-white text-center pt-3 pb-3">
               <Row>
-                <Col>1 of 1</Col>
+                <Col>
+                  <p class="fs-5">© Online Car Rental Company</p>
+                </Col>
+              </Row>
+              <Row>
+                <Col>
+                  <p class="fs-6">Done by <a href="https://github.com/Hassan-AlAmer" class="link-info" target="_blank">Hassan AlAmer</a></p>
+                </Col>
               </Row>
             </Container>
         </div>
