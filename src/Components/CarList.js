@@ -1,4 +1,5 @@
 import {Col, Card, ListGroup, ListGroupItem, Alert, Button, Row} from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 const CarList = ({cars, handleDelete}) => {
     console.log(cars);
     return(
@@ -16,7 +17,7 @@ const CarList = ({cars, handleDelete}) => {
                         <ListGroupItem><span className="fw-bold">Price:</span> {car.price}</ListGroupItem>
                         <ListGroupItem>
                             <Row>
-                                <Col><Button variant="primary" className="w-100">Update</Button></Col>
+                                <Col><Button as={Link} to={`/update/${car.id}`} variant="primary" className="w-100">Update</Button></Col>
                                 <Col><Button variant="danger" className="w-100" onClick={()=> handleDelete(car.id) }>Delete</Button></Col>
                             </Row>
                             

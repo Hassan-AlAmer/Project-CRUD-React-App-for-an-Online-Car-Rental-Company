@@ -7,6 +7,7 @@ import { MainContext } from './Contexts/MainContext';
 import {Container,Row,Col, Image } from 'react-bootstrap'
 import NewCar from './Components/NewCar';
 import banner from './imgs/banner.png';
+import UpdateCar from './Components/UpdateCar';
 
 function App() {
   const [CounCar, setCounCar] = useState(4);
@@ -53,10 +54,11 @@ function App() {
           <Container fluid style={{padding:"0"}}>
             <Image src={banner} fluid style={{width:"100%"}}/>
           </Container>
-          <Container>
+          <Container className="mt-5 mb-5">
             <Switch>
               <Route exact path="/" component={Home}/>            
               <Route path="/create" component={NewCar}/>            
+              <Route path="/update/:id" component={UpdateCar}/>            
             </Switch>
             </Container>
             <Container fluid className="bg-dark">
